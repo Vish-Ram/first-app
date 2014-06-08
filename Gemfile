@@ -3,11 +3,12 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
-# Use sqlite3 as the database for Active Record
-<<<<<<< HEAD
-=======
+#Gemfile
 
->>>>>>> 0d5a8d475cd1be0e303aba712fa0fc07811044f3
+gem 'newrelic_rpm'
+
+# Use sqlite3 as the database for Active Record
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'
@@ -42,6 +43,13 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+
+
+# Gemfile
+
+gem 'unicorn', group: :production
+gem 'thin', group: :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
